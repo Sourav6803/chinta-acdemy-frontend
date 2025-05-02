@@ -60,13 +60,7 @@ const navItems = [
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const pathname = usePathname()
-  const router = useRouter()
-  const dispatch = useDispatch()
 
-  // const handleLogout = () => {
-  //   dispatch(logoutAdmin())
-  //   router.push('/login')
-  // }
 
   return (
     <>

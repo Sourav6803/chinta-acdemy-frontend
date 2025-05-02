@@ -20,18 +20,6 @@ interface Goal {
   name: string
 }
 
-interface CourseState {
-  admin: {
-    isLoading: boolean;
-    isAdmin: boolean;
-    admin: any; 
-  };
-}
-
- interface GoalState {
-  goals: Goal[];
- }
-
 
 
 export const CoursesPage = () => {
@@ -42,7 +30,7 @@ export const CoursesPage = () => {
   const [loading, setLoading] = useState(false)
 
   const dispatch = useAppDispatch();
-  const { isLoading, courses, error } = useAppSelector((state:any) => state.course);
+  const {  courses } = useAppSelector((state:any) => state.course);
   const { goals } = useAppSelector((state: any) => state.goal);
 
 

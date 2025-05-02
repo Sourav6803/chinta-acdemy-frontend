@@ -42,7 +42,7 @@ export default function GoalsPage() {
       } else {
         toast.error('Failed to create goal')
       }
-    } catch (error: any) {
+    } catch (error: Error | any) {
       console.error(error)
       toast.error(error?.response?.data?.message || 'Something went wrong')
     } finally {
@@ -87,7 +87,7 @@ export default function GoalsPage() {
         {/* Goals Grid */}
         {goals.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {goals.map((goal: any) => (
+            {goals.map((goal: Goal) => (
               <div
                 key={goal._id}
                 className="bg-white p-4 rounded-lg border border-gray-200 shadow hover:shadow-md transition duration-200"
