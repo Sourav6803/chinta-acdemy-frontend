@@ -7,7 +7,7 @@ import {
 import { AppDispatch } from "../store"; // adjust based on your structure
 // import { loadAllGoalsRequest } from "../reducer/goal";
 
-const server = "http://localhost:8000"; // or your actual server URL
+const server = "https://chinta-academy-backend-2.onrender.com"; // or your actual server URL
 
 export const fetchAllGoals = () => async (dispatch: AppDispatch) => {
   try {

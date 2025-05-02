@@ -15,7 +15,7 @@ export default function LoginPage() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post('http://localhost:8000/api/admin/login', {
+      const res = await axios.post('https://chinta-academy-backend-2.onrender.com/api/admin/login', {
         email,
         password
       }, {

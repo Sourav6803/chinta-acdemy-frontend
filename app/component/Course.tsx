@@ -57,7 +57,7 @@ export const CoursesPage = () => {
     setLoading(true);
   
     try {
-      const response = await axios.post('http://localhost:8000/api/admin/course', {
+      const response = await axios.post('https://chinta-academy-backend-2.onrender.com/api/admin/course', {
         name: newCourse.trim(),
         goalId: selectedGoal,
       }, {withCredentials:true});

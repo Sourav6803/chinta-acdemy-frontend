@@ -79,7 +79,7 @@ export default function AssignPage() {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/auth/users"
+          "https://chinta-academy-backend-2.onrender.com/api/auth/users"
         );
         setUsers(response?.data);
       } catch (error) {
@@ -112,7 +112,7 @@ const handleAssign = async () => {
     setLoading(true);
   
     try {
-      const response = await axios.post('http://localhost:8000/api/admin/assign', {
+      const response = await axios.post('https://chinta-academy-backend-2.onrender.com', {
         userId,
         goalId: selectedGoal,
         courseId: selectedCourse,

@@ -9,7 +9,7 @@ import {
   loadAdminFail,
 } from "../reducer/admin"; // Actions defined using createAction
 
-const server = "http://localhost:8000";
+const server = "https://chinta-academy-backend-2.onrender.com";
 
 export const loadAdmin = () => async (dispatch: AppDispatch) => {
   try {

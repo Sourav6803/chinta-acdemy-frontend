@@ -49,7 +49,7 @@ export default function TopicsPage() {
   useEffect(() => {
     const fetchTopics = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/admin/all-topics')
+        const response = await axios.get('https://chinta-academy-backend-2.onrender.com/api/admin/all-topics')
         setTopics(response?.data?.data)
       } catch (error: any) {
         console.error('Error fetching topics:', error)
@@ -81,7 +81,7 @@ const handleCreateTopic = async () => {
         goalId: course?.goalId,
       };
   
-      const response = await axios.post('http://localhost:8000/api/admin/topic', payload, {withCredentials: true});
+      const response = await axios.post('https://chinta-academy-backend-2.onrender.com/api/admin/topic', payload, {withCredentials: true});
   
       const newTopicObj = {
         _id: response.data?.data?._id ?? Date.now().toString(),

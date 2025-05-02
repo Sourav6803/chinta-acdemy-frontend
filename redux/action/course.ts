@@ -6,7 +6,7 @@ import {
 } from '../reducer/course'; // Adjust path
 import { AppDispatch } from '../store';
 
-const server = "http://localhost:8000";
+const server = "https://chinta-academy-backend-2.onrender.com";
 
 export const fetchAllCourses = () => async (dispatch: AppDispatch) => {
   try {

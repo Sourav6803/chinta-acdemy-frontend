@@ -33,7 +33,7 @@ export default function GoalsPage() {
     setLoading(true)
 
     try {
-      const response = await axios.post('http://localhost:8000/api/admin/goal', { name: trimmedGoal }, {withCredentials: true})
+      const response = await axios.post('https://chinta-academy-backend-2.onrender.com/api/admin/goal', { name: trimmedGoal }, {withCredentials: true})
       if (response.status === 201 || response.status === 200) {
         toast.success('Goal created successfully')
         dispatch(fetchAllGoals())
