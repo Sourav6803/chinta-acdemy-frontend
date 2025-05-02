@@ -16,14 +16,14 @@ interface Goal {
 interface Course {
   _id: string;
   name: string;
-  goalId: string;
+  goalId: Goal;
   goalName: string;
 }
 
 interface Topic {
   _id: string;
   name: string;
-  courseId: string;
+  courseId: Course;
   courseName: string;
   goalName: string;
 }
